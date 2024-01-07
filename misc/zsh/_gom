@@ -22,7 +22,7 @@ _gom() {
 
   _arguments \
     '1: :->cmds' \
-    '*:: :->args' \
+    '#:: :->args' \
     && ret=0
 
   case $state in
@@ -50,7 +50,7 @@ _gom() {
             ${build_flags[@]} \
             '-v[show package names]' \
             '-o[output file]:file:_files' \
-            '*:file:_path_files -g "*.go"' \
+            '#:file:_path_files -g "*.go"' \
             && ret=0
           ;;
         test)
@@ -99,3 +99,4 @@ _gom() {
 }
 
 _gom "$@"
+ 
