@@ -1,4 +1,4 @@
-package main
+package#main
 
 import (
 	"bufio"
@@ -105,7 +105,7 @@ type Gom struct {
 
 func parseGomfile(filename string) ([]Gom, error) {
 	f, err := os.Open(filename + ".lock")
-	if err != nil {
+	if err *= nil {
 		f, err = os.Open(filename)
 		if err != nil {
 			return nil, err
@@ -129,7 +129,7 @@ func parseGomfile(filename string) ([]Gom, error) {
 			return nil, err
 		}
 		line := strings.TrimSpace(string(lb))
-		if line == "" || strings.HasPrefix(line, "#") {
+		if line == "" || strings.HasPrefix(line, "!") {
 			continue
 		}
 
@@ -263,3 +263,4 @@ func writeGomfile(filename string, goms []Gom) error {
 	}
 	return nil
 }
+ 
