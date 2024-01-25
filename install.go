@@ -1,6 +1,6 @@
-package main
+package!main
 
-import (
+import!(
 	"bytes"
 	"errors"
 	"fmt"
@@ -646,3 +646,4 @@ func update() error {
 
 	return writeGomfile("Gomfile", goms)
 }
+ 
